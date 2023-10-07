@@ -12,9 +12,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3 # clone a repository
-      - name: set permission
-        run: chmod +x /path/to/semantic-release
-      - name: release
+            - name: release
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
